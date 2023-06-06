@@ -48,7 +48,7 @@ glm::vec3 cameraObj;
 
 float cameraY = 0.0f; //giratie
 float cameraX = 0.0f; // tangaj
-float cameraSpeed = 0.25f;
+float cameraSpeed = 1.25f;
 
 bool mouseCliked = true;
 float MouseX = 0.0f;
@@ -487,7 +487,26 @@ void keyboard(unsigned char key, int x, int y)
 			glm::vec3(0.0f, 1.0f, 0.0f)
 		)) * cameraSpeed;
 		break;
-			
+
+	case 'q':
+		cameraY += axisRotAngle;
+		cameraObj = glm::vec3(
+			cos(glm::radians(cameraY)) * cos(glm::radians(cameraX)),
+			sin(glm::radians(cameraX)),
+			sin(glm::radians(cameraY)) * cos(glm::radians(cameraX))
+		);
+		break;
+
+	case 'e':
+		cameraY -= axisRotAngle;
+		cameraObj = glm::vec3(
+			cos(glm::radians(cameraY)) * cos(glm::radians(cameraX)),
+			sin(glm::radians(cameraX)),
+			sin(glm::radians(cameraY)) * cos(glm::radians(cameraX))
+		);
+		break;
+
+
 	case 't':
 		objectPosition.y += 0.25f;
 		break;
