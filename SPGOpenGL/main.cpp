@@ -54,7 +54,7 @@ bool mouseCliked = true;
 float MouseX = 0.0f;
 float MouseY = 0.0f;
 
-float axisRotAngle = PI / 16.0;
+float axisRotAngle = PI/2 ;
 float radius = 2;
 
 float scaleFactor = 0.5; //scale factor pentru obiect
