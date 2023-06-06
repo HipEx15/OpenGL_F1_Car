@@ -477,21 +477,13 @@ void keyboard(unsigned char key, int x, int y)
 		break;
 	case 'a':
 		cameraPosition -= glm::normalize(glm::cross(
-			glm::vec3(
-				cos(glm::radians(cameraY)),
-				0.0f,
-				-sin(glm::radians(cameraY))
-			),
+			cameraObj,
 			glm::vec3(0.0f, 1.0f, 0.0f)
 		)) * cameraSpeed;
 		break;
 	case 'd':
 		cameraPosition += glm::normalize(glm::cross(
-			glm::vec3(
-				cos(glm::radians(cameraY)),
-				0.0f,
-				-sin(glm::radians(cameraY))
-			),
+			cameraObj,
 			glm::vec3(0.0f, 1.0f, 0.0f)
 		)) * cameraSpeed;
 		break;
