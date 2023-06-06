@@ -519,6 +519,12 @@ void keyboard(unsigned char key, int x, int y)
 	case 'h':
 		objectPosition.x += 1.0f;
 		break;
+	case 'r':
+		objectPosition.z -= 1.0f;
+		break;
+	case 'y':
+		objectPosition.z += 1.0f;
+		break;
 	default:
 		break;
 	}
