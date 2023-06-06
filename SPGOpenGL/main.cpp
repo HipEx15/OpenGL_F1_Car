@@ -488,7 +488,7 @@ void keyboard(unsigned char key, int x, int y)
 		)) * cameraSpeed;
 		break;
 
-	case 'q':
+	case 'e':
 		cameraY += axisRotAngle;
 		cameraObj = glm::vec3(
 			cos(glm::radians(cameraY)) * cos(glm::radians(cameraX)),
@@ -497,7 +497,7 @@ void keyboard(unsigned char key, int x, int y)
 		);
 		break;
 
-	case 'e':
+	case 'q':
 		cameraY -= axisRotAngle;
 		cameraObj = glm::vec3(
 			cos(glm::radians(cameraY)) * cos(glm::radians(cameraX)),
